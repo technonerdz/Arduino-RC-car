@@ -11,24 +11,30 @@ void setup()
 
 void loop() 
 {
-irsend.sendSony(0xa90, 12); // Sony TV power code
-delay(50);
 
-irsend.sendSony(0xa91, 12); // Sony TV power code
-delay(50);
+   for (int i = 0; i < 10; i++) { 
+    int tosend = 0xa0 + i;
+     irsend.sendSony(tosend, 12); // Sony TV power code
+     delay(40);
+   }
+   
+   for (int i = 0; i < 10; i++) { 
+    int tosend = 0xb0 + i;
+     irsend.sendSony(tosend, 12); // Sony TV power code
+     delay(40);
+   }
 
-irsend.sendSony(0xa92, 12); // Sony TV power code
-delay(50);
+   for (int i = 0; i < 10; i++) { 
+    int tosend = 0xc0 + i;
+     irsend.sendSony(tosend, 12); // Sony TV power code
+     delay(40);
+   }
 
-irsend.sendSony(0xa93, 12); // Sony TV power code
-delay(50);
-  
-//   for (int i = 0; i < 50; i++) { 
-//     irsend.sendSony(0xa90, 12); // Sony TV power code
-//     delay(40);
-//   }
-//   for (int i = 0; i < 50; i++) { 
-//     irsend.sendSony(0xa92, 12); // Sony TV power code
-//     delay(40);
-//   }
+   for (int i = 0; i < 10; i++) { 
+    int tosend = 0xd0 + i;
+     irsend.sendSony(tosend, 12); // Sony TV power code
+     delay(40);
+   }
+
+
 }
