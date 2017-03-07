@@ -17,5 +17,5 @@ void loop() {
     Serial.println(results.value, HEX); 
     irrecv.resume(); // Receive the next value 
   }
-  delay (100); // small delay to prevent reading errors
+  //delay (100); // small delay to prevent reading errors
 }
